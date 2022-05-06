@@ -8,12 +8,12 @@
 
 using namespace std;
 
-void perm(string sub, int b, int c, vector<string>& allSubs) {
+void perm(string sub, size_t b, size_t c, vector<string>& allSubs) {
     if (b == c) {
         allSubs.push_back(sub);
     }
     else {
-        for (int i = b; i <= c; i++) {
+        for (size_t i = b; i <= c; i++) {
             swap(sub[b], sub[i]);
 
             perm(sub, b + 1, c, allSubs);
@@ -23,7 +23,7 @@ void perm(string sub, int b, int c, vector<string>& allSubs) {
     }
 }
 
-void generateWord(string s, int index, string sub, int n, vector<string>& allSubs) {
+void generateWord(string s, size_t index, string sub, size_t n, vector<string>& allSubs) {
     if (index == n) {
         if (sub.length() > 0) {
             perm(sub, 0, sub.length() - 1, allSubs);
@@ -52,7 +52,7 @@ int main()
     // zamanlı geri dönüş eklenecek
     generateWord(word, 0, sub, word.length(), allSubs);
     
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
 
     string randomWord = allSubs.at(rand() % allSubs.size());
     
