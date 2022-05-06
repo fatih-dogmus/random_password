@@ -48,7 +48,7 @@ int main()
     cout << "Karakterleri giriniz: ";
     cin >> word;
 
-    // zamanlı geri dönüş eklenecek
+    // zamanlı return eklenecek
     generateWord(word, 0, sub, word.length(), allSubs);
     
     srand(time(NULL));
