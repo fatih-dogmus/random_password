@@ -1,4 +1,5 @@
 #include <iostream>
+#include <regex>
 #include <string>
 #include <vector>
 #include <random>
@@ -42,20 +43,18 @@ void generateWord(string s, int index, string sub, int n, vector<string>& allSub
 
 int main()
 {
-    string word, sub;
+    string word, sub, regExp;
     vector<string> allSubs;
 
     cout << "Karakterleri giriniz: ";
     cin >> word;
 
-    // zamanlı return eklenecek
+    // zamanlı geri dönüş eklenecek
     generateWord(word, 0, sub, word.length(), allSubs);
     
     srand(time(NULL));
 
-    string randomWord = allSubs.at(rand() % word.length());
+    string randomWord = allSubs.at(rand() % allSubs.size());
     
     cout << randomWord << endl;
-    
-    return 0;
 }
