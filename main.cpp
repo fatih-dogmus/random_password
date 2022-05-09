@@ -12,7 +12,7 @@ void perm(string sub, size_t b, size_t c, vector<string>& allSubs) {
         allSubs.push_back(sub);
     }
     else {
-        for (size_t i = b; i <= c; i++) {
+        for (size_t i = b; i <= c; ++i) {
             swap(sub[b], sub[i]);
 
             perm(sub, b + 1, c, allSubs);
