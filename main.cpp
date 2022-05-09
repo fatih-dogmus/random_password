@@ -13,7 +13,7 @@ void perm(string sub, size_t b, size_t c, vector<string>& allSubs) {
     }
     else {
         // i++ -> x=i;i++;
-        // ++i -> x=i+1;
+        // ++i -> x=i+1;  --> daha performanslı
         for (size_t i = b; i <= c; ++i) {
             swap(sub[b], sub[i]);
 
