@@ -42,7 +42,7 @@ void generateWord(string s, size_t index, string sub, size_t n, vector<string>& 
 
 int main()
 {
-    string word, sub, regExp;
+    string word, sub;
     vector<string> allSubs;
 
     cout << "Karakterleri giriniz: ";
