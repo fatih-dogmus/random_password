@@ -12,6 +12,8 @@ void perm(string sub, size_t b, size_t c, vector<string>& allSubs) {
         allSubs.push_back(sub);
     }
     else {
+        // i++ -> x=i;i++;
+        // ++i -> x=i+1;
         for (size_t i = b; i <= c; ++i) {
             swap(sub[b], sub[i]);
 
